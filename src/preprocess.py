@@ -10,7 +10,7 @@ from PIL import Image
 from mtcnn import MTCNN
 from tensorflow.keras.preprocessing.image import ImageDataGenerator, img_to_array, load_img
 from tensorflow.keras.utils import to_categorical
-import config
+from . import config
 
 class ImagePreprocessor:
     """

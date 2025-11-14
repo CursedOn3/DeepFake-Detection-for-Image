@@ -10,8 +10,8 @@ import tensorflow as tf
 import cv2
 from glob import glob
 
-import config
-from preprocess import ImagePreprocessor
+from . import config
+from .preprocess import ImagePreprocessor
 
 
 class DeepfakeInference:

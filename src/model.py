@@ -11,7 +11,7 @@ from tensorflow.keras.layers import (
     Conv2D, MaxPooling2D, Flatten, Dense, Dropout, 
     BatchNormalization, GlobalAveragePooling2D, Input
 )
-import config
+from . import config
 
 
 class DeepfakeDetector:
