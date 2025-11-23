@@ -1,0 +1,46 @@
+🎯 HOW TO TEST IF AN IMAGE IS DEEPFAKE
+Method 1: Super Simple Script (RECOMMENDED)
+I just created check_image.py for you. Use it like this:
+    
+    # Test a single image
+    python check_image.py path\to\your\image.jpg
+
+    # Examples:
+    python check_image.py photo.jpg
+    python check_image.py "C:\Users\Photos\suspect.jpg"
+    python check_image.py d:\downloads\image.png
+
+Output will look like:
+============================================================
+         DEEPFAKE DETECTION - IMAGE CHECKER
+============================================================
+
+Loading model from models/deepfake_detector.h5...
+✓ Model loaded successfully!
+Processing image: photo.jpg
+Analyzing...
+
+============================================================
+IMAGE: photo.jpg
+============================================================
+✅ PREDICTION: REAL (Authentic)
+   Confidence: 87.45%
+   Certainty: High
+============================================================
+
+Method 2: Using Main Program
+# Single image
+python main.py --inference --image photo.jpg
+
+# Multiple images in a folder
+python main.py --inference --directory d:\photos --save_results
+
+# Using a specific model
+python main.py --inference --image photo.jpg --model_path models\my_model.h5
+
+Method 3: Test with one of your training images
+Let me demonstrate with a test image:
+    python check_image.py data\test\real\img_0.jpg
+    python check_image.py data\test\fake\img_0.jpg
+
+
