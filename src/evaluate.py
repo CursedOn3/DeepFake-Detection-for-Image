@@ -14,8 +14,8 @@ from sklearn.metrics import (
 )
 import tensorflow as tf
 
-import config
-from preprocess import ImagePreprocessor
+from . import config
+from .preprocess import ImagePreprocessor
 
 
 class ModelEvaluator:

@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 import json
 import cv2
 
-import config
+from . import config
 
 
 class DownloadProgressBar(tqdm):

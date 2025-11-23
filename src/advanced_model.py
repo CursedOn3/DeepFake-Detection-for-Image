@@ -9,6 +9,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.applications import ResNet50, EfficientNetB0
 import numpy as np
+from . import config
 
 
 class AttentionLayer(layers.Layer):
