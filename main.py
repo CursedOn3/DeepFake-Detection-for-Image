@@ -358,7 +358,7 @@ Examples:
     
     # Training parameters
     parser.add_argument('--model', type=str, default=config.MODEL_TYPE,
-                       choices=['efficientnet', 'custom_cnn', 'deep_cnn'],
+                       choices=['efficientnet', 'custom_cnn', 'deep_cnn', 'resnext', 'advanced_efficientnet'],
                        help='Model architecture')
     parser.add_argument('--epochs', type=int, default=config.EPOCHS,
                        help='Number of training epochs')

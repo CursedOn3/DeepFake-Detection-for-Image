@@ -13,9 +13,10 @@ from tensorflow.keras.callbacks import (
     TensorBoard, CSVLogger
 )
 
-import config
-from model import DeepfakeDetector
-from preprocess import ImagePreprocessor
+from . import config
+from .model import DeepfakeDetector
+from .preprocess import ImagePreprocessor
+from .advanced_model import create_advanced_model
 
 
 class ModelTrainer:

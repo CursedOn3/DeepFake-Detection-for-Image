@@ -35,7 +35,7 @@ TRAINING_HISTORY_PATH = os.path.join(RESULTS_DIR, 'training_history.png')
 CLASSIFICATION_REPORT_PATH = os.path.join(RESULTS_DIR, 'classification_report.txt')
 
 # ==================== MODEL CONFIGURATION ====================
-# Model architecture choice: 'efficientnet' or 'custom_cnn'
+# Model architecture choice: 'efficientnet', 'custom_cnn', 'deep_cnn', 'resnext', 'advanced_efficientnet'
 MODEL_TYPE = 'efficientnet'
 
 # Image dimensions

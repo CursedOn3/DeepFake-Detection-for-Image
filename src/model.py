@@ -222,7 +222,7 @@ class DeepfakeDetector:
         Factory method to create and compile a model based on type
         
         Args:
-            model_type (str): Type of model ('efficientnet', 'custom_cnn', 'deep_cnn')
+            model_type (str): Type of model ('efficientnet', 'custom_cnn', 'deep_cnn', 'resnext', 'advanced_efficientnet')
             input_shape (tuple): Input shape (if None, uses config values)
             
         Returns:
@@ -242,6 +242,12 @@ class DeepfakeDetector:
             model = DeepfakeDetector.create_custom_cnn_model(input_shape)
         elif model_type.lower() == 'deep_cnn':
             model = DeepfakeDetector.create_deeper_cnn_model(input_shape)
+        elif model_type.lower() in ['resnext', 'advanced_efficientnet']:
+            # Use advanced models with attention mechanism
+            from .advanced_model import create_advanced_model
+            model_name = 'resnext' if model_type.lower() == 'resnext' else 'efficientnet'
+            model = create_advanced_model(model_name, input_shape)
+            return model  # Already compiled in advanced_model.py
         else:
             raise ValueError(f"Unknown model type: {model_type}")
         
